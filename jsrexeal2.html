@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Myanmar voiting department</title>
+	<!-- <link rel="stylesheet" type="text/css" href="js2.css"> -->
+	<script type="text/javascript">
+		function ch(argument) {
+			// body...
+			var num=prompt("Enter your age.");
+			confirm("Are you sure? Your age is "+num+".")
+			if (num>=18 && num<=100) 
+				{
+					alert("You can vote.");
+				} 
+				else {
+						if (num>0 && num<18) 
+							{
+								alert("You can't vote.");
+							} 
+							else {
+								if (num<=0 || num>100) 
+									{
+										alert("Your age is impossible.")
+									} 
+							}
+				}
+		}
+		/*function start(argument) {
+			// body...
+			document.write("Myanmar voting assossary.");
+		}*/
+		function img(argument) {
+			// body...
+			document.getElememtById("vimg").innerHTML="Voting Image";
+		}
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.warp{
+			width: 400px;
+			height: 500px;
+			border: solid 5px gray;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+		.card__menu{
+			width: 100%;
+			height: 50px;
+			background: #8f9fa1;
+		}
+		.logo{
+			width: 50%;
+			height: 50px;
+			
+			float: left;
+		}
+		.img-logo{
+			width: 35px;
+			height: 35px;
+			border-radius: 10px;
+			border: solid 5px  yellow green red;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNp1UyDTLH_OjxR9IgPJI7NTXE8knvzrkmw&usqp=CAU);
+			background-size: cover;
+			background-position: 210%;
+			transform: translateX(66%) translateY(12%);
+		}
+		.contant{
+			width: 50%;
+			height: 50px;
+			
+			float: left;
+		}
+		.text-link{
+			width: 80px;
+			height: 50px;
+			
+			float: left;
+			font-size: 20px;
+
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			transform: translateX(71%) translateY(0%);
+		}
+		.text-link a{
+			text-decoration: none;
+			color: white;
+		}
+		/*.img-link{
+			width: 50%;
+			height: 50px;
+			background: blue;
+			float: left;
+			
+		}*/
+		.img-transform{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			transform: translateX(373%) translateY(12%);
+		}
+		.img{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: solid 3px blue;
+			background: url(facebook.png);
+			background-size: cover;
+			background-position: 10%;
+		}
+		.card__img{
+			width: 100%;
+			height: 150px;
+			
+			transform: translateY(0%);
+		}
+		.vote-img{
+			width: 100%;
+			height: 150px;
+			background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKkRnkD8ddWLOj5r797fUTnBH2dyEeV9_scA&usqp=CAU);
+			background-size: cover;
+			background-position: 102%;
+			
+		}
+		.card__content{
+			width: 100%;
+			height: 300px;
+			
+		}
+		.content{
+			width: 100%;
+			height: 220px;
+			
+		}
+		h1{
+			padding-top: 10px;
+			text-decoration: underline;
+			text-align: center;
+			height: 100px;
+			/*display: flex;*/
+		}
+		.just-content{
+			height: 100px;
+			padding: 10px;
+		}
+		.alert{
+			width: 50%;
+			transform: translateX(57%) translateY(124%);
+			color: red;
+		}
+		.click{
+			width: 100%;
+			height: 70px;
+			
+		}
+		/*.click-border{
+			width: 40px;
+			height: 20px;
+			border-radius: 10px;
+			background: darkcyan;
+		}*/
+		.button{
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+			background: darkcyan;
+			transform: translateX(144%) translateY(62%);
+			border: solid 3px blue;
+		}
+		.button:hover{
+			background: cyan;
+			border: solid 4px yellow;
+		}
+	</style>
+</head>
+<body>
+	<div onclick="start()" class="warp">
+		<div class="card__menu">
+			<div class="logo">
+				<div class="img-logo"></div>
+			</div>
+			<div class="contant">
+				<div class="text-link">
+					<a href="#about">About</a>
+				</div>
+				<div class="img-link">
+					<div class="img-transform">
+						<a href="#facebook"><div class="img"></div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card__img">
+			<div onclick="img()" id="vimg" class="vote-img"></div>
+		</div>
+		<div class="card__content">
+			<div class="content">
+				<i><h1>Voting</h1></i>
+				<span class="just-content">
+					Vote happily.Feel free to vote.You can vote what you like.
+				</span>
+				<div class="alert">
+					<span>*Click to be the age limit.</span>
+				</div>
+			</div>
+			<div class="click">
+				<!-- <div class="click-border"> -->
+					<input onclick="ch()" class="button" type="button" value="Click Here" name="">
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
