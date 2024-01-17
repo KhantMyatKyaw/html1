@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cars & Prices</title>
+	<style type="text/css">
+		
+		body{
+			background-color: black;
+		}
+		.wrapper{
+			margin: 0 auto;
+		}
+		.d1{
+			width: 350px;
+			height: 350px;
+			background-color: darkred;
+			margin: 20px auto;
+		}
+		img{
+			width: 320px;
+			height: 320px;
+			border: solid 5px darkblue;
+			border-radius: 20px;
+			margin: 10px;
+		}
+		.d2{
+			width: 350px;
+			/*height: 50px;*/
+			/*background-color: cyan;*/
+			margin: 20px auto;
+		}
+		select{
+			width: 350px;
+			height: 30px;
+			text-align: center;
+			font-size: 16px;
+		}
+		input{
+			width: 345px;
+			height: 30px;
+			margin: 10px auto;
+			text-align: center;
+		}
+		.btn{
+			width: 150px;
+			height: 30px;
+			margin-left: 98px;
+			color: white;
+			background-color: blueviolet;
+			border: solid 3px darkcyan;
+			border-radius: 10px;
+		}
+		.btn:hover{
+			background-color: yellowgreen;
+			color: black;
+			border: solid 3px blue;
+		}
+	</style>
+	<script type="text/javascript">
+		function ch_img() {
+			// body...
+			document.img.src=document.f1.ddl_cars.options[document.f1.ddl_cars.selectedIndex].value;
+
+			switch(document.f1.ddl_cars.selectedIndex){
+				case 0: document.f1.prices.value="0";
+					break;
+				case 1: document.f1.prices.value="10000000";
+					break;
+				case 2: document.f1.prices.value="50000000";
+					break;
+				case 3: document.f1.prices.value="20000000";
+					break;
+				case 4: document.f1.prices.value="15000000";
+					break;
+			}
+		}
+
+		function calcu(argument) {
+			// body...
+			document.f1.amount.value=document.f1.prices.value*document.f1.qty.value;
+		}
+	</script>
+</head>
+<body>
+	<form name="f1">
+		<div class="wrapper">
+			<div class="d1">
+				<img name="img" src="../web lessons/Html2/noimg.png">
+			</div>
+			<div class="d2">
+				<select name="ddl_cars" onchange="ch_img()">
+					<option value="../web lessons/Html2/noimg.png">No Image</option>
+					<option value="../web lessons/Html2/toyota.jpeg">TOYOTA</option>
+					<option value="../web lessons/Html2/bmw.jpg">BMW</option>
+					<option value="../web lessons/Html2/suzuki.jpeg">SUZUKI</option>
+					<option value="../web lessons/Html2/hondai.jpeg">HONDAI</option>
+				</select>
+				<input name="prices" type="text" placeholder="Price" name="">
+				<input name="qty" type="text" placeholder="Qty" name="">
+				<input onclick="calcu()" class="btn" type="button" value="Paid" name="">
+				<input name="amount" type="text" placeholder="Amount" name="">
+			</div>
+		</div>
+	</form>
+	
+</body>
+</html>
